@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiProject.BrandListPage"
+             Title="Lista de Marcas">
+
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+            <GradientStop Color="#FF8400FF" Offset="0.0" />
+            <GradientStop Color="#FF3700FF" Offset="1.0" />
+        </LinearGradientBrush>
+    </ContentPage.Background>
+
+    <VerticalStackLayout Padding="10">
+        <Label Text="Lista de Marcas"
+               FontSize="24"
+               TextColor="#333"
+               FontAttributes="Bold"
+               HorizontalOptions="Center"
+               Margin="0,10,0,20" />
+
+        <CollectionView x:Name="BrandCollectionView"
+                        ItemsSource="{Binding Brands}"
+                        SelectionMode="None">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame Padding="10"
+                           Margin="5"
+                           BackgroundColor="White"
+                           CornerRadius="10"
+                           HasShadow="True">
+                        <VerticalStackLayout>
+                            <Label Text="{Binding Name}"
+                                   FontSize="18"
+                                   FontAttributes="Bold"
+                                   TextColor="#0078D4" />
+                            <Label Text="{Binding Description}"
+                                   FontSize="14"
+                                   TextColor="#666" />
+                        </VerticalStackLayout>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </VerticalStackLayout>
+</ContentPage>

@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiProject.MainPage">
+
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+            <GradientStop Color="#FF8400FF" Offset="0.0" />
+            <GradientStop Color="#FF3700FF" Offset="1.0" />
+        </LinearGradientBrush>
+    </ContentPage.Background>
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,50"
+            Spacing="25"
+            HorizontalOptions="Center"
+            VerticalOptions="Center">
+
+        <Label Text="¡Bienvenido a la Aplicación!"
+            FontSize="28"
+            HorizontalOptions="Center"
+            TextColor="White"
+            FontAttributes="Bold"/>
+
+        <Label Text="Gestión de Marcas Simplificada"
+            FontSize="16"
+            HorizontalOptions="Center"
+            TextColor="#E0E0E0"/>
+
+        <Button Text="Dar de Alta Marca"
+            FontSize="18"
+            TextColor="White"
+            BackgroundColor="#0078D4"
+            CornerRadius="10"
+            Padding="10,5"
+            Clicked="OnNavigateToForm"/>
+
+        <Button Text="Ver Lista de Marcas"
+            FontSize="18"
+            TextColor="White"
+            BackgroundColor="#0078D4"
+            CornerRadius="10"
+            Padding="10,5"
+            Clicked="OnNavigateToBrandList"/>
+
+        <Label Text="Versión 1.0"
+            FontSize="14"
+            TextColor="#E0E0E0"
+            HorizontalOptions="Center"
+            VerticalOptions="End"
+            Margin="0,20,0,0"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

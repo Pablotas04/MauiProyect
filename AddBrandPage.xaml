@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiProject.AddBrandPage"
+             Title="Alta de Marca">
+
+       <ContentPage.Background>
+              <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+              <GradientStop Color="#FF8400FF" Offset="0.0" />
+              <GradientStop Color="#FF3700FF" Offset="1.0" />
+              </LinearGradientBrush>
+       </ContentPage.Background>
+             
+       <StackLayout Padding="20">
+              <Label Text="Nueva Marca"
+                     FontSize="24"
+                     TextColor="White"
+                     HorizontalOptions="Center"/>
+
+       <Entry x:Name="BrandNameEntry"
+              Placeholder="Nombre de la Marca"
+              FontSize="16"
+              Margin="0,10,0,0"/>
+
+       <Editor x:Name="BrandDescriptionEditor"
+              Placeholder="Descripción de la Marca"
+              FontSize="16"
+              Margin="0,10,0,10"
+              HeightRequest="100"/>
+
+       <Button Text="Guardar Marca"
+              FontSize="18"
+              TextColor="White"
+              BackgroundColor="#FFFF008C"
+              CornerRadius="10"
+              Padding="10,5"
+              Clicked="OnSaveBrand"/>
+       </StackLayout>
+</ContentPage>
